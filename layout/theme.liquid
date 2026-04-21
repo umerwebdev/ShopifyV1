@@ -309,13 +309,20 @@
 
     {% sections 'header-group' %}
 
-    <h3>this is coming from the vs code</h3>
+    <pre>
+      {% if request.design_mode  %}     
+        this is coming from the vs code
+        {%- else  -%}
+        this is coming live server 
+      {% endif  %}   
+      </pre>
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
 
     {% sections 'footer-group' %}
+    {% sections 'hello-world' %}
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
