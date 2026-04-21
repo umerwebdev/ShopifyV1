@@ -79,7 +79,6 @@
   },
   "order": [
     "image_banner",
-    "featured_collection",
-    "hello-world"
+    "featured_collection"
   ]
 }
