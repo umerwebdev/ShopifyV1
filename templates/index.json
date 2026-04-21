@@ -75,10 +75,82 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "177679773974b2e5a6": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_77be83e_9eCw7N": {
+          "type": "ai_gen_block_77be83e",
+          "settings": {
+            "title": "Choose your plan",
+            "subtitle": "Select the perfect subscription for your needs",
+            "title_size": 36,
+            "subtitle_size": 16,
+            "desktop_width_percent": 100,
+            "background_color": "#FFFFFF",
+            "text_color": "#121212",
+            "card_background_color": "#FFFFFF",
+            "card_text_color": "#121212",
+            "card_border_color": "#E0E0E0",
+            "card_border_thickness": 1,
+            "card_border_radius": 12,
+            "price_color": "#121212",
+            "checkmark_color": "#4CAF50",
+            "featured_border_color": "#334FB4",
+            "featured_border_thickness": 2,
+            "badge_background_color": "#334FB4",
+            "badge_text_color": "#FFFFFF",
+            "button_background_color": "#121212",
+            "button_text_color": "#FFFFFF",
+            "button_hover_background_color": "#000000",
+            "button_border_radius": 6,
+            "featured_button_background_color": "#334FB4",
+            "featured_button_text_color": "#FFFFFF",
+            "featured_button_hover_background_color": "#2840A0",
+            "currency_symbol": "$",
+            "plan_1_enabled": true,
+            "plan_1_name": "Basic",
+            "plan_1_price": "9",
+            "plan_1_period": "per month",
+            "plan_1_description": "Perfect for individuals getting started",
+            "plan_1_features": "5 Projects|10 GB Storage|Basic Support|Monthly Reports",
+            "plan_1_button_text": "Get started",
+            "plan_1_button_link": "",
+            "plan_1_featured": false,
+            "plan_1_badge_text": "",
+            "plan_2_enabled": true,
+            "plan_2_name": "Professional",
+            "plan_2_price": "29",
+            "plan_2_period": "per month",
+            "plan_2_description": "Best for growing businesses",
+            "plan_2_features": "Unlimited Projects|100 GB Storage|Priority Support|Weekly Reports|Advanced Analytics",
+            "plan_2_button_text": "Get started",
+            "plan_2_button_link": "",
+            "plan_2_featured": true,
+            "plan_2_badge_text": "Most popular",
+            "plan_3_enabled": true,
+            "plan_3_name": "Enterprise",
+            "plan_3_price": "99",
+            "plan_3_period": "per month",
+            "plan_3_description": "For large teams and organizations",
+            "plan_3_features": "Unlimited Everything|1 TB Storage|24/7 Dedicated Support|Real-time Reports|Custom Integrations|API Access",
+            "plan_3_button_text": "Contact sales",
+            "plan_3_button_link": "",
+            "plan_3_featured": false,
+            "plan_3_badge_text": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_77be83e_9eCw7N"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "featured_collection",
+    "177679773974b2e5a6"
   ]
 }
