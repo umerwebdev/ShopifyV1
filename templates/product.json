@@ -12,10 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "meterial_AGpYjp": {
-          "type": "meterial",
-          "settings": {}
-        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -29,6 +25,10 @@
         },
         "price": {
           "type": "price",
+          "settings": {}
+        },
+        "meterial_AGpYjp": {
+          "type": "meterial",
           "settings": {}
         },
         "variant_picker": {
@@ -61,10 +61,10 @@
         }
       },
       "block_order": [
-        "meterial_AGpYjp",
         "vendor",
         "title",
         "price",
+        "meterial_AGpYjp",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
