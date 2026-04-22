@@ -12,6 +12,10 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "meterial_AGpYjp": {
+          "type": "meterial",
+          "settings": {}
+        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -57,6 +61,7 @@
         }
       },
       "block_order": [
+        "meterial_AGpYjp",
         "vendor",
         "title",
         "price",
