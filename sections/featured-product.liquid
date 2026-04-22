@@ -408,6 +408,8 @@
                   -%}
                 {%- when 'custom_liquid' -%}
                   {{ block.settings.custom_liquid }}
+                {%- when 'material' -%}
+                  <div>Material : <strong><p>{{product.metafields.custom.materail}}</p></strong></div>
                 {%- when 'rating' -%}
                   {%- if product.metafields.reviews.rating.value != blank -%}
                     <div class="rating-wrapper">
@@ -1332,6 +1334,10 @@
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
         }
       ]
+    },
+    {
+      "type":"material",
+      "name":"Material"
     }
   ],
   "settings": [
