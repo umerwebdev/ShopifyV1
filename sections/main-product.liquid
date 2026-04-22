@@ -477,6 +477,8 @@
 
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+              {%- when 'material' -%}
+                  <div>Material : <strong><p>{{product.metafields.custom.materail}}</p></strong></div>
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
@@ -2086,6 +2088,10 @@
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
         }
       ]
+    },
+    {
+      "type":"material",
+      "name":"Material"
     }
   ],
   "settings": [
