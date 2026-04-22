@@ -12,10 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "material_U3wDj8": {
-          "type": "material",
-          "settings": {}
-        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -61,7 +57,6 @@
         }
       },
       "block_order": [
-        "material_U3wDj8",
         "vendor",
         "title",
         "price",
