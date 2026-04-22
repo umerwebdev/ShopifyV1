@@ -79,7 +79,9 @@
     "hello_world_LQ6jmx": {
       "type": "hello-world",
       "name": "Hello World",
-      "settings": {}
+      "settings": {
+        "title": "custom section"
+      }
     }
   },
   "order": [
