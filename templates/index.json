@@ -97,12 +97,52 @@
         "button_bg": "#000000",
         "button_color": "#ffffff"
       }
+    },
+    "image_with_text_CHXDmV": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_kDkzk7": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ metaobjects.influencer[\"mr-beast\"].nmae.value }}",
+            "heading_size": "h1"
+          }
+        },
+        "text_WJgMxX": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p>{{ metaobjects.influencer[\"mr-beast\"].discription | metafield_tag }}",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kDkzk7",
+        "text_WJgMxX"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "{{ metaobjects.influencer[\"mr-beast\"].image.value }}",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
     "hello_world_LQ6jmx",
-    "custom_image_section_rWz7pf"
+    "custom_image_section_rWz7pf",
+    "image_with_text_CHXDmV"
   ]
 }
