@@ -1,40 +1,66 @@
-<div>
-  {%- for block in section.blocks -%}
+{%- style -%}
+    .custom-section {
+  padding: 40px;
+  text-align: center;
+}
 
-    {% case block.type %}
+.custom-container {
+  max-width: 600px;
+  margin: auto;
+}
 
-      {% when 'image' %}
-        <div>
-          <img src="{{ block.settings.image | image_url }}" alt="">
-        </div>
+.custom-container h2 {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
 
-      {% when 'description_title' %}
-        <p style="color: {{ block.settings.font_color }}">
-          {{ block.settings.text }}
-        </p>
+.custom-container p {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
 
-      {% when 'title' %}
-        <h2 style="color: {{ block.settings.font_color }}">
-          {{ block.settings.text }}
-        </h2>
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+{%- endstyle -%}
 
-      {% when 'description' %}
-        <p style="color: {{ block.settings.font_color }}">
-          {{ block.settings.text }}
-        </p>
+<div class="custom-section" style="color: {{ section.settings.font_color }};">
 
-      {% when 'button' %}
-        <div>
-          <a href="{{ block.settings.link }}" style="color: {{ block.settings.font_color }}">
-            {{ block.settings.label }}
+  <div class="custom-container">
+    
+    {% for block in section.blocks %}
+      
+      {% case block.type %}
+
+        {% when 'title' %}
+          <h2 style="background: {{ block.settings.bg_color }}; color: {{ block.settings.font_color }};">
+            Veterinarian-Approved
+          </h2>
+
+        {% when 'description' %}
+          <p style="background: {{ block.settings.bg_color }}; color: {{ block.settings.font_color }};">
+            All products
+          </p>
+
+        {% when 'button' %}
+          <a href="#" class="btn"
+            style="background: {{ block.settings.bg_color }}; color: {{ block.settings.font_color }};">
+            View Products
           </a>
-        </div>
 
-    {% endcase %}
+      {% endcase %}
 
-  {%- endfor -%}
+    {% endfor %}
+
+  </div>
+
 </div>
-
       {% schema %}
         {
           "name": "Custom Image Section",
