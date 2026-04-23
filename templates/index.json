@@ -79,22 +79,12 @@
     "hello_world_LQ6jmx": {
       "type": "hello-world",
       "name": "Hello World",
-      "settings": {
-        "text_allignment": "center"
-      }
-    },
-    "custom_image_section_8xeRXn": {
-      "type": "custom-image-section",
-      "name": "Custom Image Section",
-      "settings": {
-        "font_color": "#fff"
-      }
+      "settings": {}
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "hello_world_LQ6jmx",
-    "custom_image_section_8xeRXn"
+    "hello_world_LQ6jmx"
   ]
 }

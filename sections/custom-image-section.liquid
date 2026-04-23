@@ -1,30 +1,131 @@
 <div>
-    <div>
-        <img src="" alt="">
-    </div>
-    <p>Dr.Ernie Sanderson</p>
-    <h2>Veterinarian-Approved</h2>
-    <p>All products</p>
-    <div><a href="">View Products</a></div>
+  {%- for block in section.blocks -%}
 
+    {% case block.type %}
+
+      {% when 'image' %}
+        <div>
+          <img src="{{ block.settings.image | image_url }}" alt="">
+        </div>
+
+      {% when 'description_title' %}
+        <p style="color: {{ block.settings.font_color }}">
+          {{ block.settings.text }}
+        </p>
+
+      {% when 'title' %}
+        <h2 style="color: {{ block.settings.font_color }}">
+          {{ block.settings.text }}
+        </h2>
+
+      {% when 'description' %}
+        <p style="color: {{ block.settings.font_color }}">
+          {{ block.settings.text }}
+        </p>
+
+      {% when 'button' %}
+        <div>
+          <a href="{{ block.settings.link }}" style="color: {{ block.settings.font_color }}">
+            {{ block.settings.label }}
+          </a>
+        </div>
+
+    {% endcase %}
+
+  {%- endfor -%}
 </div>
 
-{% schema %}
-  {
-    "name": "Custom Image Section",
-    "class": "custom-image-section",
-    "settings": [
-    {
-        "type": "color",
-        "id": "font_color",
-        "label": "Font Color",
-        "default": "#fff"
-      }
-    ],
-    "presets": [
-      {
-        "name": "Custom Image Section"
-      }
-    ]
-  }
-{% endschema %}
+      {% schema %}
+        {
+          "name": "Custom Image Section",
+          "class": "custom-image-section",
+          "settings": [
+            {
+              "type": "color",
+              "id": "font_color",
+              "label": "Font Color",
+              "default": "#ffffff"
+            }
+          ],
+          "blocks": [
+            {
+              "type": "image",
+              "name": "Image",
+              "settings": [
+                {
+                  "type": "image_picker",
+                  "id": "image",
+                  "label": "Select Image"
+                }
+              ]
+            },
+            {
+              "type": "title",
+              "name": "Title",
+              "settings": [
+                {
+                  "type": "color",
+                  "id": "bg_color",
+                  "label": "Background Color",
+                  "default": "#e9e9e9"
+                }, {
+                  "type": "color",
+                  "id": "font_color",
+                  "label": "Font Color",
+                  "default": "#ffffff"
+                }
+              ]
+            },
+            {
+              "type": "description",
+              "name": "Description",
+              "settings": [
+                {
+                  "type": "color",
+                  "id": "bg_color",
+                  "label": "Background Color",
+                  "default": "#e9e9e9"
+                }, {
+                  "type": "color",
+                  "id": "font_color",
+                  "label": "Font Color",
+                  "default": "#ffffff"
+                }
+              ]
+            },
+            {
+              "type": "description_title",
+              "name": "Description Title",
+              "settings": [
+                {
+                  "type": "color",
+                  "id": "font_color",
+                  "label": "Font Color",
+                  "default": "#ffffff"
+                }
+              ]
+            }, {
+              "type": "button",
+              "name": "Button",
+              "settings": [
+                {
+                  "type": "color",
+                  "id": "bg_color",
+                  "label": "Background Color",
+                  "default": "#e9e9e9"
+                }, {
+                  "type": "color",
+                  "id": "font_color",
+                  "label": "Font Color",
+                  "default": "#ffffff"
+                }
+              ]
+            }
+          ],
+          "presets": [
+            {
+              "name": "Custom Image Section"
+            }
+          ]
+        }
+      {% endschema %}
