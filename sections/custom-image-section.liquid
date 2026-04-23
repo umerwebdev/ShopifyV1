@@ -1,157 +1,132 @@
 {%- style -%}
-    .custom-section {
+.custom-section {
   padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  max-width: 400px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.custom-container {
-  max-width: 600px;
-  margin: auto;
+.card img {
+  width: 100%;
+  height: auto;
 }
 
-.custom-container h2 {
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 6px;
+.card-content {
+  padding: 20px;
 }
 
-.custom-container p {
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 6px;
+.card h2 {
+  margin: 10px 0;
 }
 
-.btn {
+.card p {
+  margin: 10px 0;
+}
+
+.card .btn {
   display: inline-block;
+  margin-top: 15px;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 6px;
-  font-weight: bold;
 }
 {%- endstyle -%}
 
-<div class="custom-section" style="color: {{ section.settings.font_color }};">
+<div class="custom-section">
+  <div class="card">
 
-  <div class="custom-container">
-    
-    {% for block in section.blocks %}
-      
-      {% case block.type %}
+    {% if section.settings.image != blank %}
+      <img src="{{ section.settings.image | image_url }}" alt="">
+    {% endif %}
 
-        {% when 'title' %}
-          <h2 style="background: {{ block.settings.bg_color }}; color: {{ block.settings.font_color }};">
-            Veterinarian-Approved
-          </h2>
+    <div class="card-content">
 
-        {% when 'description' %}
-          <p style="background: {{ block.settings.bg_color }}; color: {{ block.settings.font_color }};">
-            All products
-          </p>
+      <p>{{ section.settings.subtitle }}</p>
 
-        {% when 'button' %}
-          <a href="#" class="btn"
-            style="background: {{ block.settings.bg_color }}; color: {{ block.settings.font_color }};">
-            View Products
-          </a>
+      <h2 style="color: {{ section.settings.title_color }}">
+        {{ section.settings.title }}
+      </h2>
 
-      {% endcase %}
+      <p>{{ section.settings.description }}</p>
 
-    {% endfor %}
+      <a href="{{ section.settings.button_link }}" 
+         class="btn"
+         style="background: {{ section.settings.button_bg }}; color: {{ section.settings.button_color }};">
+        {{ section.settings.button_text }}
+      </a>
 
+    </div>
   </div>
-
 </div>
-      {% schema %}
-        {
-          "name": "Custom Image Section",
-          "class": "custom-image-section",
-          "settings": [
-            {
-              "type": "color",
-              "id": "font_color",
-              "label": "Font Color",
-              "default": "#ffffff"
-            }
-          ],
-          "blocks": [
-            {
-              "type": "image",
-              "name": "Image",
-              "settings": [
-                {
-                  "type": "image_picker",
-                  "id": "image",
-                  "label": "Select Image"
-                }
-              ]
-            },
-            {
-              "type": "title",
-              "name": "Title",
-              "settings": [
-                {
-                  "type": "color",
-                  "id": "bg_color",
-                  "label": "Background Color",
-                  "default": "#e9e9e9"
-                }, {
-                  "type": "color",
-                  "id": "font_color",
-                  "label": "Font Color",
-                  "default": "#ffffff"
-                }
-              ]
-            },
-            {
-              "type": "description",
-              "name": "Description",
-              "settings": [
-                {
-                  "type": "color",
-                  "id": "bg_color",
-                  "label": "Background Color",
-                  "default": "#e9e9e9"
-                }, {
-                  "type": "color",
-                  "id": "font_color",
-                  "label": "Font Color",
-                  "default": "#ffffff"
-                }
-              ]
-            },
-            {
-              "type": "description_title",
-              "name": "Description Title",
-              "settings": [
-                {
-                  "type": "color",
-                  "id": "font_color",
-                  "label": "Font Color",
-                  "default": "#ffffff"
-                }
-              ]
-            }, {
-              "type": "button",
-              "name": "Button",
-              "settings": [
-                {
-                  "type": "color",
-                  "id": "bg_color",
-                  "label": "Background Color",
-                  "default": "#e9e9e9"
-                }, {
-                  "type": "color",
-                  "id": "font_color",
-                  "label": "Font Color",
-                  "default": "#ffffff"
-                }
-              ]
-            }
-          ],
-          "presets": [
-            {
-              "name": "Custom Image Section"
-            }
-          ]
-        }
-      {% endschema %}
+{% schema %}
+{
+  "name": "Custom Card Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Card Image"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Dr. Ernie Sanderson"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Veterinarian-Approved"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "All products"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "View Products"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Card Section"
+    }
+  ]
+}
+{% endschema %}
