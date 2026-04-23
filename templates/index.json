@@ -79,12 +79,30 @@
     "hello_world_LQ6jmx": {
       "type": "hello-world",
       "name": "Hello World",
-      "settings": {}
+      "settings": {
+        "text_allignment": "center"
+      }
+    },
+    "custom_image_section_rWz7pf": {
+      "type": "custom-image-section",
+      "name": "Custom Card Section",
+      "settings": {
+        "image": "shopify://shop_images/diy-organic-candle_925x_ffee0efd-279f-4659-b291-30a77767c937.jpg",
+        "subtitle": "Dr. Ernie Sanderson",
+        "title": "Veterinarian-Approved",
+        "description": "All products",
+        "button_text": "View Products",
+        "button_link": "",
+        "title_color": "#000000",
+        "button_bg": "#000000",
+        "button_color": "#ffffff"
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "hello_world_LQ6jmx"
+    "hello_world_LQ6jmx",
+    "custom_image_section_rWz7pf"
   ]
 }
