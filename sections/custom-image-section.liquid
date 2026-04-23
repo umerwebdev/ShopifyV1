@@ -1,0 +1,132 @@
+{%- style -%}
+.custom-section {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  max-width: 400px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h2 {
+  margin: 10px 0;
+}
+
+.card p {
+  margin: 10px 0;
+}
+
+.card .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+{%- endstyle -%}
+
+<div class="custom-section">
+  <div class="card">
+
+    {% if section.settings.image != blank %}
+      <img src="{{ section.settings.image | image_url }}" alt="">
+    {% endif %}
+
+    <div class="card-content">
+
+      <p>{{ section.settings.subtitle }}</p>
+
+      <h2 style="color: {{ section.settings.title_color }}">
+        {{ section.settings.title }}
+      </h2>
+
+      <p>{{ section.settings.description }}</p>
+
+      <a href="{{ section.settings.button_link }}" 
+         class="btn"
+         style="background: {{ section.settings.button_bg }}; color: {{ section.settings.button_color }};">
+        {{ section.settings.button_text }}
+      </a>
+
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Custom Card Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Card Image"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Dr. Ernie Sanderson"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Veterinarian-Approved"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "All products"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "View Products"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Card Section"
+    }
+  ]
+}
+{% endschema %}
