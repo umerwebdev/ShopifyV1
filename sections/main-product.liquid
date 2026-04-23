@@ -478,7 +478,10 @@
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'meterial' -%}
-                  <div>Meterial : <strong><p>{{product.metafields.custom.meterial}}</p></strong></div>
+                {%- if product.metafields.custom.meterial != blank -%}
+                  <div>Meterial : <p><strong>{{product.metafields.custom.meterial}}</strong></p></div>
+                    {%- endif -%}
+
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
