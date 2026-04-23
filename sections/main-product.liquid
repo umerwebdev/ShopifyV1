@@ -467,7 +467,7 @@
                     aria-haspopup="dialog"
                   >
                     {{ block.settings.text | default: block.settings.page.title | escape }}
-                  </button>
+                  </bu tton>
                 </modal-opener>
               {%- when 'share' -%}
                 {% liquid
@@ -481,7 +481,6 @@
                 {%- if product.metafields.custom.meterial != blank -%}
                   <div>Meterial : <p><strong>{{product.metafields.custom.meterial}}</strong></p></div>
                     {%- endif -%}
-
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
