@@ -79,12 +79,55 @@
     "hello_world_LQ6jmx": {
       "type": "hello-world",
       "name": "Hello World",
-      "settings": {}
+      "settings": {
+        "text_allignment": "center"
+      }
+    },
+    "custom_image_section_MBtxfp": {
+      "type": "custom-image-section",
+      "blocks": {
+        "button_FDUexV": {
+          "type": "button",
+          "settings": {
+            "bg_color": "#e9e9e9",
+            "font_color": "#ffffff"
+          }
+        },
+        "description_WXAgRH": {
+          "type": "description",
+          "settings": {
+            "bg_color": "#e9e9e9",
+            "font_color": "#ffffff"
+          }
+        },
+        "title_AnUyQG": {
+          "type": "title",
+          "settings": {
+            "bg_color": "#e9e9e9",
+            "font_color": "#ffffff"
+          }
+        },
+        "image_XTiFEL": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "button_FDUexV",
+        "description_WXAgRH",
+        "title_AnUyQG",
+        "image_XTiFEL"
+      ],
+      "name": "Custom Image Section",
+      "settings": {
+        "font_color": "#ffffff"
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "hello_world_LQ6jmx"
+    "hello_world_LQ6jmx",
+    "custom_image_section_MBtxfp"
   ]
 }
