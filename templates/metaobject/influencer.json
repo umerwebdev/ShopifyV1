@@ -15,14 +15,14 @@
         "heading_NWihKC": {
           "type": "heading",
           "settings": {
-            "heading": "{{ metaobject.nmae.value }}",
+            "heading": "Default Heading",
             "heading_size": "h1"
           }
         },
         "text_6nkNHk": {
           "type": "text",
           "settings": {
-            "text": "<p></p>{{ metaobject.discription | metafield_tag }}",
+            "text": "<p>Default text</p>",
             "text_style": "body"
           }
         }
@@ -31,21 +31,11 @@
         "heading_NWihKC",
         "text_6nkNHk"
       ],
-      "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "{{ metaobject.image.value }}",
+        "image": "",
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "layout": "image_first"
       }
     }
   },
