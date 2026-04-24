@@ -104,14 +104,14 @@
         "heading_kDkzk7": {
           "type": "heading",
           "settings": {
-            "heading": "{{ metaobjects.influencer[\"mr-beast\"].nmae.value }}",
+            "heading": "Welcome to Our Store",
             "heading_size": "h1"
           }
         },
         "text_WJgMxX": {
           "type": "text",
           "settings": {
-            "text": "<p></p>{{ metaobjects.influencer[\"mr-beast\"].discription | metafield_tag }}",
+            "text": "<p>Discover our amazing products and exclusive deals.</p>",
             "text_style": "body"
           }
         }
@@ -122,7 +122,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "{{ metaobjects.influencer[\"mr-beast\"].image.value }}",
+        "image": "",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
