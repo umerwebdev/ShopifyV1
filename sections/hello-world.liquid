@@ -5,14 +5,14 @@
 {% endstyle %}
 
 <h1 class="hello-world" style="color:{{ section.settings.font_color}};">{{ section.settings.title }}</h1>
-<div style="text-allign{{section.settings.text_allignment}}">
+<div style="text-align: {{section.settings.text_allignment}}">
 
   {%- for block in section.blocks -%}
     {% case block.type %}
     {% when 'title' %}
-      <h2 style="background-color:{{block.settings.bg_color}}; color={{block.settings.font_color}}" >Title</h2>
+      <h2 style="background-color:{{block.settings.bg_color}}; color:{{block.settings.font_color}}" >Title</h2>
       {% when 'subtitle' %}
-        <h5 style="background-color:{{block.settings.bg_color}}; color={{block.settings.font_color}}">Subtitle</h5>
+        <h5 style="background-color:{{block.settings.bg_color}}; color:{{block.settings.font_color}}">Subtitle</h5>
       {%- endcase -%}
     {%- endfor -%}
 
